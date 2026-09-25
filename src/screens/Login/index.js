@@ -1,34 +1,34 @@
-import { Image, Pressable, Text, TextInput, View } from "react-native";
-import { styles } from "./style";
+import { Image, Text, View } from "react-native";
+import * as S from "./style";
 import Logo from "../../assets/logo-img.png";
 
 export const Login = () => {
 	return(
-		<View style={styles.loginContainer}>
+		<S.LoginContainer>
 			<Image source={Logo}/>
-			<View style={styles.loginContent}>
-				<Text style={styles.titleText}>
-					Faça login e se <Text style={styles.highlightText}>surpreenda</Text>
-				</Text>
-				<View style={styles.formContainer}>
-					<View style={styles.inputsContainer}>
+			<S.LoginContent>
+				<S.TitleText>
+					Faça login e se <S.HighlightText>surpreenda</S.HighlightText>
+				</S.TitleText>
+				<S.FormContainer>
+					<S.InputsContainer>
 						<View>
 							<Text>E-mail:</Text>
-							<TextInput keyboardType="email-address" style={styles.input}/>
+							<S.Input keyboardType="email-address"/>
 						</View>
 						<View>
 							<Text>Senha:</Text>
-							<TextInput secureTextEntry={true} style={styles.input}/>
+							<S.Input secureTextEntry={true}/>
 						</View>
-					</View>
-					<Pressable style={styles.loginButton}>
-						<Text style={styles.loginText}>Entrar</Text>
-					</Pressable>
-				</View>
-				<Text style={styles.signUp}>
-					Não tem uma conta? <Text style={styles.signUpText}>Criar conta</Text>
-				</Text>
-			</View>
-		</View>
+					</S.InputsContainer>
+					<S.LoginButton>
+						<S.LoginText>Entrar</S.LoginText>
+					</S.LoginButton>
+				</S.FormContainer>
+				<S.SignUp>
+					Não tem uma conta? <S.SignUpText>Criar conta</S.SignUpText>
+				</S.SignUp>
+			</S.LoginContent>
+		</S.LoginContainer>
 	);
 }
